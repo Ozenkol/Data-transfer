@@ -18,4 +18,12 @@
 <li>User numbers 1 million, products 10 million</li>
 </ol>
 <h3>Preparation</h3>
-<p></p>
+<p><i>recomendatios</i> contains foreign keys referencing users and products. Since both databases are on the same server we need ensure data integrity (all user_id and product_id references are valid). Before transferring, we must check if all referenced users and products exist in the target database to prevent foreign key violations.
+</p>
+<h3>Transfer</h3>
+<p>Since both databases are on the same server, the most efficient method is direct SQL transfer using INSERT INTO ... SELECT.
+</p>
+<h3>Validation</h3>
+<p>After the transfer, we verify data integrity and consistency.
+
+</p>
